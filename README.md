@@ -13,6 +13,8 @@ A collection of my CTF challenge writeups and solutions.
     - [WEB](#web)
     - [REV](#rev)
     - [PWN](#pwn)
+  - [IEEE CTF](#ieee-ctf)
+    - [WEB](#web-1)
 - [About](#about)
 
 ## Repository Structure
@@ -23,6 +25,9 @@ CyberETO/
 ├── WEB/            # Web Security
 ├── REV/            # Reverse Engineering  
 └── PWN/            # Binary Exploitation
+
+IEEE/
+└── WEB/            # Web Security
 ```
 
 ## Challenges Solved
@@ -42,6 +47,11 @@ CyberETO/
 #### PWN
 - [Magic](./CyberETO/PWN/Magic.md)
 - [Admoone](./CyberETO/PWN/Admoone.md)
+
+### IEEE CTF
+
+#### WEB
+- [Hash](./IEEE/WEB/Hash/Writeup.md)
 
 ## About
 
