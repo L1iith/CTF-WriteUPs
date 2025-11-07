@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title or "CTF App" }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin: 2rem; }
+    nav a { margin-right: 1rem; }
+    .error { color: #b00020; }
+    .message { color: #006400; }
+    form { margin: 1rem 0; }
+    label { display: block; margin: 0.25rem 0; }
+    input[type="text"], input[type="email"], input[type="password"] { width: 320px; max-width: 100%; padding: 0.4rem; }
+    button { padding: 0.5rem 0.75rem; }
+    .card { border: 1px solid #ddd; padding: 1rem; border-radius: 6px; max-width: 640px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('index') }}">Home</a>
+    {% if session.get('loggedin') %}
+      <span>Hi, {{ session.get('username') }}{% if session.get('role') %} ({{ session.get('role') }}){% endif %}</span>
+      {% if session.get('role') == 'admin' %}
+        <a href="{{ url_for('admin') }}">Admin</a>
+      {% endif %}
+      <form action="{{ url_for('logout') }}" method="post" style="display:inline;">
+        <button type="submit">Logout</button>
+      </form>
+    {% else %}
+      <a href="{{ url_for('login') }}">Login</a>
+      <a href="{{ url_for('signup') }}">Sign up</a>
+      <a href="{{ url_for('reset') }}">Reset password</a>
+    {% endif %}
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

@@ -15,6 +15,8 @@ A collection of my CTF challenge writeups and solutions.
     - [PWN](#pwn)
   - [IEEE CTF](#ieee-ctf)
     - [WEB](#web-1)
+  - [IEEE Finals CTF](#ieee-finals-ctf)
+    - [WEB](#web-2)
 - [About](#about)
 
 ## Repository Structure
@@ -27,6 +29,9 @@ CyberETO/
 └── PWN/            # Binary Exploitation
 
 IEEE/
+└── WEB/            # Web Security
+
+IEEEFinals/
 └── WEB/            # Web Security
 ```
 
@@ -52,6 +57,13 @@ IEEE/
 
 #### WEB
 - [Hash](./IEEE/WEB/Hash/Writeup.md)
+
+### IEEE Finals CTF
+
+#### WEB
+- [The Blind Pickle](./IEEEFinals/BlindPickle/README.md)
+- [marlowww](./IEEEFinals/Marlowww/README.md)
+- [Role-Play](./IEEEFinals/Roleplay/README.md)
 
 ## About
 

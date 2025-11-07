@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Reset Password</h2>
+<div class="card">
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  <p>Enter your username and email. If they match, you'll be able to set a new password.</p>
+  <form method="post" action="{{ url_for('reset') }}">
+    <label>Username
+      <input type="text" name="username" required>
+    </label>
+    <label>Email
+      <input type="email" name="email" required>
+    </label>
+    <button type="submit">Continue</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Set New Password</h2>
+<div class="card">
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  {% if message %}<p class="message">{{ message }}</p>{% endif %}
+
+  {% if uid_token %}
+    <form method="post" action="{{ url_for('reset_confirm') }}">
+
+      <input type="hidden" name="uid_token" value="{{ uid_token }}">
+      <label>New Password
+        <input type="password" name="new_password" required>
+      </label>
+      <button type="submit">Update Password</button>
+    </form>
+  {% else %}
+    <p>Go back to <a href="{{ url_for('reset') }}">Reset Password</a>.</p>
+  {% endif %}
+</div>
+{% endblock %}
